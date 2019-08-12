@@ -5,7 +5,7 @@ function getRepositories() {
   req.send()
 }
 
-showRepositories(event, data) {
+function showRepository(event, data) {
   const repos = JSON.parse(this.responseText)
   const src = document.getElementById('repository-template').innerHTML
   const template = Handlebars.compile(src)
